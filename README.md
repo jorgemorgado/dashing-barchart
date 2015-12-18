@@ -1,5 +1,9 @@
 # dashing-barchart
 
+## Preview
+
+![BarChart](https://raw.githubusercontent.com/wiki/jorgemorgado/dashing-barchart/barchart.png)
+
 ## Description
 
 Simple [Dashing](http://shopify.github.com/dashing) widget (and associated job)
@@ -23,7 +27,7 @@ Add the following code on the desired dashboard:
 Create your bar chart job `my_barchart_job.rb`:
 
 ```ruby
-# Note: change this to obtain your chart data to some external source
+# Note: change this to obtain your chart data from some external source
 labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
 data = [
   {
