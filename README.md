@@ -50,6 +50,10 @@ data = [
 send_event('barchart', { labels: labels, datasets: data })
 ```
 
+## Contributors
+
+- [Jorge Morgado](https://github.com/jorgemorgado)
+
 ## License
 
 This widget is released under the [MIT License](http://www.opensource.org/licenses/MIT).

@@ -1,17 +1,17 @@
 class Dashing.BarChart extends Dashing.Widget
 
   ready: ->
-    @ctx = $(@node).find('.chart-area')[0].getContext('2d');
+    @ctx = $(@node).find('.chart-area')[0].getContext('2d')
     @myData = {
       labels: @get('labels')
       datasets: @get('datasets')
     }
 
     @myChart = new Chart(@ctx).Bar(@myData, {
-      responsive: false,
-      barShowStroke: true,
-      scaleShowVerticalLines: false,
-      maintainAspectRatio: true,
+      responsive: false
+      barShowStroke: true
+      scaleShowVerticalLines: false
+      maintainAspectRatio: true
     })
 
   onData: (data) ->
@@ -21,9 +21,9 @@ class Dashing.BarChart extends Dashing.Widget
     #   ...
     #   @myChart.datasets[1].bars[0].value = data.datasets[1].data[0]
     #   ...
-    if @myChart
+    if @myChart && data.datasets
       for i in [0..@myChart.datasets.length - 1]
         for j in [0..@myChart.datasets[i].bars.length - 1]
-           @myChart.datasets[i].bars[j].value = data.datasets[i].data[j]
+          @myChart.datasets[i].bars[j].value = data.datasets[i].data[j]
 
-      @myChart.update();
+      @myChart.update()
