@@ -7,12 +7,12 @@ class Dashing.BarChart extends Dashing.Widget
       datasets: @get('datasets')
     }
 
-    @myChart = new Chart(@ctx).Bar(@myData, {
+    @myChart = new Chart(@ctx).Bar(@myData, $.extend({
       responsive: false
       barShowStroke: true
       scaleShowVerticalLines: false
-      maintainAspectRatio: true
-    })
+      maintainAspectRatio: true,
+    }, @get('options')))
 
   onData: (data) ->
     # Load new values, ie,
