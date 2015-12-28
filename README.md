@@ -54,6 +54,7 @@ send_event('barchart', { labels: labels, datasets: data, options: options })
 ## Contributors
 
 - [Jorge Morgado](https://github.com/jorgemorgado)
+- [Maomao Liu](https://github.com/maomaoliu)
 
 ## License
 

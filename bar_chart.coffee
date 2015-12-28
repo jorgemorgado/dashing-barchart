@@ -11,7 +11,7 @@ class Dashing.BarChart extends Dashing.Widget
       responsive: false
       barShowStroke: true
       scaleShowVerticalLines: false
-      maintainAspectRatio: true,
+      maintainAspectRatio: true
     }, @get('options')))
 
   onData: (data) ->
