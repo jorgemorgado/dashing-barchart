@@ -46,8 +46,9 @@ data = [
     data: Array.new(labels.length) { rand(40..80) },
   }
 ]
+options = { scaleFontColor: '#fff' }
 
-send_event('barchart', { labels: labels, datasets: data })
+send_event('barchart', { labels: labels, datasets: data, options: options })
 ```
 
 ## Contributors
