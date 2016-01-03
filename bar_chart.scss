@@ -6,27 +6,32 @@ $background-color:  #303030;
 $title-color:       rgba(255, 255, 255, 0.7);
 $moreinfo-color:    rgba(255, 255, 255, 0.7);
 $updateat-color:    rgba(255, 255, 255, 1);
-$chart-width:       100%;
-$chart-height:      100%;
+
+// If you want the title at the top, set the position to 'top'
+$title-position:    center;
 
 // ----------------------------------------------------------------------------
 // Widget-bar-chart styles
 // ----------------------------------------------------------------------------
 .widget-bar-chart {
+
   background-color: $background-color;
   position: relative;
 
   .canvas-holder {
     position: absolute;
-    left: 0px;
+    // Respect the widget's margin of 5px
+    left: 5px;
     top: 0px;
   }
 
   .title {
-    left: 0;
-    right: 0;
-    top: 10px;
-    position: absolute;
+    @if $title-position == 'top' {
+      left: 0;
+      right: 0;
+      top: 10px;
+      position: absolute;
+    }
     color: $title-color;
   }
 
@@ -38,6 +43,4 @@ $chart-height:      100%;
     color: $updateat-color;
   }
 
-  // canvas#chart-area.chart-area {
-  // }
 }

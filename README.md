@@ -51,10 +51,19 @@ options = { scaleFontColor: '#fff' }
 send_event('barchart', { labels: labels, datasets: data, options: options })
 ```
 
+By default the title will be displayed in the center of the widget. If you
+prefer to move it to the top, change the `$title-position` variable on the
+SCSS file. Example:
+
+```scss
+$title-position:    top;
+```
+
 ## Contributors
 
-- [Jorge Morgado](https://github.com/jorgemorgado)
+- [Jorge Morgado](https://github.com/jorgemorgado) (Author)
 - [Maomao Liu](https://github.com/maomaoliu)
+- [Chris Hughes](https://github.com/chrisspang)
 
 ## License
 

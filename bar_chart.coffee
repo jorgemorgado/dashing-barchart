@@ -3,10 +3,14 @@ class Dashing.BarChart extends Dashing.Widget
   ready: ->
     container = $(@node).parent()
     width = (Dashing.widget_base_dimensions[0] * container.data("sizex")) + Dashing.widget_margins[0] * 2 * (container.data("sizex") - 1)
-    height = (Dashing.widget_base_dimensions[1] * container.data("sizey")) - 30
+    height = (Dashing.widget_base_dimensions[1] * container.data("sizey")) - 35
+
+    # Lower the chart's height to make space for the moreinfo if present
+    if @get('moreinfo')
+      height -= 20
 
     canvas = $(@node).find('.canvas-holder')
-    canvas.append("<canvas width=\"#{width}\" height=\"#{height}\" id=\"chart-area\" class=\"chart-area\"/>")
+    canvas.append("<canvas width=\"#{width}\" height=\"#{height}\" class=\"chart-area\"/>")
 
     @ctx = $(@node).find('.chart-area')[0].getContext('2d')
     @myData = {
