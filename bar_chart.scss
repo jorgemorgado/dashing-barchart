@@ -13,10 +13,20 @@ $chart-height:      100%;
 // Widget-bar-chart styles
 // ----------------------------------------------------------------------------
 .widget-bar-chart {
-
   background-color: $background-color;
+  position: relative;
+
+  .canvas-holder {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
 
   .title {
+    left: 0;
+    right: 0;
+    top: 10px;
+    position: absolute;
     color: $title-color;
   }
 
@@ -28,9 +38,6 @@ $chart-height:      100%;
     color: $updateat-color;
   }
 
-  canvas#chart-area.chart-area {
-    width: $chart-width !important;
-    height: $chart-height !important;
-  }
-
+  // canvas#chart-area.chart-area {
+  // }
 }
