@@ -18,13 +18,6 @@ $title-position:    center;
   background-color: $background-color;
   position: relative;
 
-  .canvas-holder {
-    position: absolute;
-    // Respect the widget's margin of 5px
-    left: 5px;
-    top: 0px;
-  }
-
   .title {
     @if $title-position == 'top' {
       left: 0;
