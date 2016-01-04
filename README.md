@@ -74,7 +74,7 @@ needed you can change their value using the `data-` attributes. Example:
 ```
 
 If not set, both right and bottom margins will be equal to left and top margins
-respectively. This is likely want you want to keep the chart centered within
+respectively. This is likely what you want to keep the chart centered within
 the widget. If not, set their values also using the `data-` attributes:
 
 ```erb
